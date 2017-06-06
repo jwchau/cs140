@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>CS160/L Lab/Prog [x] Driver</title>
+</head>
+<body onload="main()">
+    <div>
+		<h1>Lab 3</h1>
+        <h3>- John Chau, 1364513</h3>
+        <canvas style="border: solid 3px red;" id='webgl' width = '1001px' height = '1001px'>
+        </canvas>
+    </div>
+	<div>
+	<input type="range" id="yaxis" min="0" max="360" style="width:400px" value="0"> 
+	<p1>Rotate //for debug, Rotation for the assignment uses right mouse button</p1></div>
+
+	<div>
+	<input type="range" id="scaleSlider" min="0.5" max="2" step="0.05" style="width:400px" value="1"> 
+	<p1>Scale //scale is cumulative, starts at default 1 == no scale </p1></div>
+
+	<div>
+	<input type="range" id="gloss" min="1" max="20" value="0" step='1'> 
+	<p1>Glossiness</p1></div>
+	
+	<div></div>
+	<input type="file" id="fileinput" />
+<script src="../lib/webgl-utils.js"></script>
+<script src="../lib/webgl-debug.js"></script>
+<script src="../lib/cuon-utils.js"></script>
+<script src="../lib/cuon-matrix.js"></script>
+<script src="../lib/ioSOR.js"></script>
+<script src="driver.js" type="application/javascript"></script>
+<br></br>
+<button onclick="saveCurrentSOR()" type="button">Save current SOR</button>
+<button onclick="updateScreen()" type="button">Extract SOR</button>
+<br></br>
+<a href="features.html">Features HTML File</a>
+</body>
+<div></div>
+	<input type="checkbox"  id="lightDir" checked="boo"><p2> Directional Light toggle </p2>
+<div></div>
+	<input type="checkbox"  id="persToggle" checked="boo"><p2>Perspective Toggle </p2>
+<div></div>
+	<input type="checkbox"  id="orthoToggle" checked="boo"><p2>Ortho Toggle</p2>
+<div></div>
+	<input type="checkbox"  id="specToggle" checked="boo"><p2> specular toggle </p2>
+<div></div>
+	<input type="checkbox"  id="flatshade" checked="boo"><p2> flat shading toggle </p2>
+
+</html>
